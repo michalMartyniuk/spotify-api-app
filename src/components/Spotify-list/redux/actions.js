@@ -1,15 +1,15 @@
-import { YOUTUBE_RESULTS, VIDEO_SELECT } from './actionTypes'
-import { wikipediaSearch } from '../../Wikipedia/redux/actions'
+import { SPOTIFY_RESULTS, ALBUM_SELECT } from './actionTypes'
+import { spotifySearch } from '../../Spotify/redux/actions'
 
-export const youtubeResults = videos => ({
-  type: YOUTUBE_RESULTS,
-  payload: videos
+export const spotifyResults = albums => ({
+  type: SPOTIFY_RESULTS,
+  payload: albums
 })
 
-export const videoSelect = video => dispatch => {
-  dispatch(wikipediaSearch(video.title))
+export const albumSelect = album => dispatch => {
+  dispatch(spotifySearch(album.title))
   dispatch({
-    type: VIDEO_SELECT,
-    payload: video
+    type: ALBUM_SELECT,
+    payload: album
   })
 }

@@ -1,24 +1,24 @@
-import { YOUTUBE_RESULTS, VIDEO_SELECT } from './actionTypes'
+import { SPOTIFY_RESULTS, ALBUM_SELECT } from './actionTypes'
 
-export const youtubeReducer = (state = {
-  videos: [],
-  videoSelected: null,
+export const spotifyListReducer = (state = {
+  albums: [],
+  albumSelected: null,
 }, action) => {
   switch (action.type) {
 
-    case YOUTUBE_RESULTS:
-      const videos = action.payload
+    case SPOTIFY_RESULTS:
+      const albums = action.payload
       return {
         ...state,
-        videos,
-        videoSelected: videos[0],
+        albums,
+        albumSelected: albums[0],
       }
 
-    case VIDEO_SELECT:
-      const video = action.payload
+    case ALBUM_SELECT:
+      const album = action.payload
       return {
         ...state,
-        videoSelected: video,
+        albumSelected: album,
       }
 
     default:

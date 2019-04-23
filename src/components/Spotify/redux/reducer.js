@@ -1,6 +1,6 @@
 import { WIKIPEDIA_RESULTS, WIKIPEDIA_ERROR } from './actionTypes'
 
-export const wikipediaReducer = (state = {
+export const spotifyReducer = (state = {
   informations: {},
   error: {}
 }, action) => {

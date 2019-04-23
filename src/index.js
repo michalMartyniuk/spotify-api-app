@@ -7,18 +7,18 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { spotifyReducer } from './components/Spotify/redux/reducer'
 import { spotifyListReducer } from './components/Spotify-list/redux/reducer'
-import { searchReducer } from './components/Search-field/redux/reducer'
-import { selectReducer } from './components/Select/redux/reducer'
-import { buttonsReducer } from './components/Buttons/redux/reducer'
+// import { searchReducer } from './components/Search-field/redux/reducer'
+// import { selectReducer } from './components/Select/redux/reducer'
+// import { buttonsReducer } from './components/Buttons/redux/reducer'
 import reduxThunk from 'redux-thunk'
 
 const store = createStore(
   combineReducers({
-    search: searchReducer,
-    spotify-list: spotifyListReducer,
+    // search: searchReducer,
+    spotifyList: spotifyListReducer,
     spotify: spotifyReducer,
-    select: selectReducer,
-    buttons: buttonsReducer
+    // select: selectReducer,
+    // buttons: buttonsReducer
   }),
   applyMiddleware(reduxThunk)
 )
